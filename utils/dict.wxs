@@ -1,0 +1,10 @@
+function dict(val){
+  var result="";
+  var con={'100001':"愿借阅",'100002':"愿出售",'100003':'愿捐赠','100004':'仅展示','100005':'下架',
+           '200001':'可借出','200002':'发书中','200003':'被借阅','200004':'收书中' };
+  result=con[val.toString()];
+  return result;
+}
+module.exports={
+  dict:dict
+}

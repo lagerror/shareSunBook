@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/collector/collector",
+    "pages/circulation/circulation",
+    "pages/action/action",
+    "pages/my/my",
+    "pages/detailBook/detailBook"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/indexs.png"
+      },
+      {
+        "pagePath": "pages/collector/collector",
+        "text": "个人藏书",
+        "iconPath": "images/collector.png",
+        "selectedIconPath": "images/collectors.png"
+      },
+      {
+        "pagePath": "pages/circulation/circulation",
+        "text": "图书借还",
+        "iconPath": "images/circulation.png",
+        "selectedIconPath": "images/circulations.png"
+      },
+      {
+        "pagePath": "pages/action/action",
+        "text": "读书活动",
+        "iconPath": "images/action.png",
+        "selectedIconPath": "images/actions.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/mys.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "长大读书 读书长大",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

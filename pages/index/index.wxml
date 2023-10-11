@@ -1,0 +1,42 @@
+<!--pages/index/index.wxml-->
+<view class="content">
+  <view class="search">
+    <view class="searchInput" bindtap="searchInput">
+      <image src="/images/tubiao/fangdajing-1.jpg" style="width:15px;height:19px;"></image>
+      <text class="searchContent">搜索共享图书</text>
+    </view>
+  </view>
+  <view class="category">
+    <view class="left">
+      <block wx:for="{{category}}" wx:key="id">
+        <view class="{{flag==index?'select':'normal'}}" data-id="{{item.id}}" bind:tap="switchNav">{{item.name}}</view>
+      </block>
+    </view>
+    <view class="space"></view>
+    <view class="right">
+      <view class="hr"></view>
+      <view class="rightContent">
+        <view class="header">
+          <view bind:tap="turnPage" data-id="up">上一页</view><view>{{pageIndex}}/{{bookSimpleList.total}}</view><view bind:tap="turnPage" data-id="down">下一页</view>
+        </view>
+        <scroll-view class="bibliosList" scroll-y="true">
+          <block wx:for="{{bookSimpleList.data}}" wx:key="id">
+            <view class="book" bind:tap="detailBook" id="{{item.id}}">
+              <view class="pic">
+                <image src="{{item.imagePath}}" mode="aspectFill"></image>
+              </view>
+              <view class="info">
+                <view class="name">{{item.book_name}}</view>
+                <view class="desc">{{item.publishers}}</view>
+                <view class="desc">作者：{{item.author}}</view>
+                <view class="desc">{{item.isbn}}</view>
+                <view class="desc">价格：{{item.market_price}}</view>
+              </view>
+            </view>
+            <view class="hr"></view>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

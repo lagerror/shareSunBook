@@ -1,0 +1,43 @@
+/* pages/collector/collector.wxss */
+.header{
+  display: flex;
+  flex-direction: row;
+}
+
+.header view {
+  text-align: center;
+  color:white;
+  width: 16%;
+  background-color: rgb(106, 178, 238);
+  border-radius: 6px;
+  margin-left: 5px;
+  padding: 3px 3px 3px 3px;
+}
+
+.holdingList{
+  height: 540px;
+}
+.book {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.pic image {
+  width:100px;
+  height: 120px;
+  padding: 10px;
+}
+.name {
+  font-size: 15px;
+  font-weight: bold;
+}
+.desc {
+  color:#333333;
+}
+.hr{
+  height: 3px;
+  background-color: #dddddd;
+}

@@ -1,0 +1,33 @@
+<wxs module="util" src="../../utils/dict.wxs"></wxs>
+<view>
+  <view style="text-align: center;background-color: rgb(92, 161, 250);color: white;line-height: 25px;align-content: center;">个人信息展示</view>
+  <view style="display:flex;flex-direction: row;">
+    <view><image style="width: 60px;height:60px;border-radius: 30px;" src='{{reader.image}}'></image></view>
+    <view>{{reader.nickName}}</view>
+    <view bind:tap="scanIsbn">扫码录入个人藏书</view>
+  </view>
+  <view style="width: 100%; margin: 10px auto; text-align: center;background-color: rgb(92, 161, 250);color: white;line-height: 25px;align-content: center;">个人藏书展示:共{{holding.total}}本书</view>
+  <view>
+  <view class="header" style="width: 100%;">
+    <view bind:tap="filter" data-id="0">全部</view> <view bind:tap="filter" data-id="100001">可借阅</view> <view bind:tap="filter" data-id="100002">可出售</view> <view bind:tap="filter" data-id="100003">愿捐赠</view> <view bind:tap="filter" data-id="100004">仅展示</view> <view bind:tap="filter" data-id="100005">下架</view>
+  </view>
+    <scroll-view class="holdingList" scroll-y="true">
+          <block wx:for="{{holding.data}}" wx:key="sku">
+            <view class="book" bind:tap="detailBook" id="{{item.id}}">
+              <view class="pic">
+                <image src="{{item.imagePath}}" mode="aspectFill"></image>
+              </view>
+              <view class="info">
+                <view class="name">{{item.book_name}}</view>
+                <view class="desc">{{item.publisher}}</view>
+                <view class="desc">作者：{{item.author}}</view>
+                <view class="desc">{{item.isbn}}</view>
+                <view class="desc">原价:{{item.market_price}};售价:{{item.discountPrice}}</view>
+                <view class="desc">{{util.dict(item.bookType)}};{{util.dict(item.bookState)}}</view>
+              </view>
+            </view>
+            <view class="hr"></view>
+          </block>
+      </scroll-view>
+  </view>
+</view>

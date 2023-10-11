@@ -52,8 +52,8 @@ App({
  globalData:{
    openid:null,
    reader:null,
-   //localHost:'http://localhost:5157/api/'
-   localHost:'https://reader.yangtzeu.edu.cn/mini/api/'
+   localHost:'http://localhost:5157/api/'
+  
  }
 
 })
